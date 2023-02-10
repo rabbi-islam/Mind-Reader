@@ -15,7 +15,12 @@ public class ThirdActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String msg = intent.getStringExtra(SecondActivity.InputValue);
+        String str1 = intent.getStringExtra(SecondActivity.alphabetValue1);
+        String str2 = intent.getStringExtra(SecondActivity.alphabetValue2);
+        String str3 = intent.getStringExtra(SecondActivity.alphabetValue3);
 
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, str1, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, str2, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, str3, Toast.LENGTH_SHORT).show();
     }
 }

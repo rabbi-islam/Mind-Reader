@@ -57,10 +57,10 @@
                 app:hintTextColor="@color/teal_700"
                 android:layout_marginTop="2dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="First Letter Line No">
+                android:hint="Third Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext2"
+                    android:id="@+id/inputNumberEdittext3"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
@@ -72,10 +72,10 @@
                 app:hintTextColor="@color/teal_700"
                 android:layout_marginTop="2dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="First Letter Line No">
+                android:hint="Fifth Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext3"
+                    android:id="@+id/inputNumberEdittext5"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
@@ -97,10 +97,10 @@
                 app:hintTextColor="@color/teal_700"
                 android:layout_marginTop="2dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="First Letter Line No">
+                android:hint="Second Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext4"
+                    android:id="@+id/inputNumberEdittext2"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
@@ -112,10 +112,10 @@
                 app:hintTextColor="@color/teal_700"
                 android:layout_marginTop="2dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="First Letter Line No">
+                android:hint="Fourth Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext5"
+                    android:id="@+id/inputNumberEdittext4"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
