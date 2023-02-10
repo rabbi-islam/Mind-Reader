@@ -102,8 +102,7 @@ public class SecondActivity extends AppCompatActivity {
 
             Toast.makeText(this, "num3 invalid!!", Toast.LENGTH_SHORT).show();
         }else{
-
-            Toast.makeText(this, "success", Toast.LENGTH_SHORT).show();
+            sendValue();
         }
     }
     private void validationForFourEditText(){
@@ -126,7 +125,7 @@ public class SecondActivity extends AppCompatActivity {
             Toast.makeText(this, "num4 invalid!!", Toast.LENGTH_SHORT).show();
         }else{
 
-            Toast.makeText(this, "success", Toast.LENGTH_SHORT).show();
+            sendValue();
         }
     }
     private void validationForFiveEditText(){
@@ -151,8 +150,32 @@ public class SecondActivity extends AppCompatActivity {
 
             Toast.makeText(this, "num5 invalid!!", Toast.LENGTH_SHORT).show();
         }else{
-
-            Toast.makeText(this, "success", Toast.LENGTH_SHORT).show();
+            sendValue();
         }
     }
+    public void sendValue(){
+        //sending edittext number in 3rd activity got from 1st activity
+        Intent intent = new Intent(this, ThirdActivity.class);
+        intent.putExtra(InputValue, value);
+
+        if (gettingNumberOfLetter==3){
+            intent.putExtra(alphabetValue1, num1);
+            intent.putExtra(alphabetValue2, num2);
+            intent.putExtra(alphabetValue3, num3);
+        }else if (gettingNumberOfLetter==4){
+            intent.putExtra(alphabetValue1, num1);
+            intent.putExtra(alphabetValue2, num2);
+            intent.putExtra(alphabetValue3, num3);
+            intent.putExtra(alphabetValue4, num4);
+        }else if (gettingNumberOfLetter==5){
+            intent.putExtra(alphabetValue1, num1);
+            intent.putExtra(alphabetValue2, num2);
+            intent.putExtra(alphabetValue3, num3);
+            intent.putExtra(alphabetValue4, num4);
+            intent.putExtra(alphabetValue5, num5);
+        }
+        startActivity(intent);
+
+    }
+
 }
