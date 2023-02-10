@@ -19,10 +19,10 @@ public class SecondActivity extends AppCompatActivity {
     public static final String alphabetValue5 = "com5";
 
 
-    int gettingNumberOfLetter;
-    EditText editText1,editText2,editText3,editText4,editText5;
-    Button submitBtn;
-    String num1,num2,num3,num4,num5,value;
+    private  int gettingNumberOfLetter;
+   private EditText editText1,editText2,editText3,editText4,editText5;
+   private Button submitBtn;
+   private String num1,num2,num3,num4,num5,value;
     String val1;
 
     @Override

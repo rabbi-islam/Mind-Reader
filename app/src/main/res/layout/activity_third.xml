@@ -45,7 +45,7 @@
                 android:hint="First Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext1"
+                    android:id="@+id/inputEdittext1"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
@@ -60,7 +60,7 @@
                 android:hint="Third Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext3"
+                    android:id="@+id/inputEdittext3"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
@@ -75,7 +75,7 @@
                 android:hint="Fifth Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext5"
+                    android:id="@+id/inputEdittext5"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
@@ -100,7 +100,7 @@
                 android:hint="Second Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext2"
+                    android:id="@+id/inputEdittext2"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
@@ -115,7 +115,7 @@
                 android:hint="Fourth Letter Line No">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNumberEdittext4"
+                    android:id="@+id/inputEdittext4"
                     android:layout_width="match_parent"
                     android:inputType="number"
                     android:layout_height="wrap_content"/>
@@ -143,6 +143,62 @@
             <TableLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+                <TableRow
+                    android:id="@+id/tableRow0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_marginEnd="@dimen/letter_margin2"
+                        android:text="1"
+                        android:textSize="@dimen/text_size1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_marginEnd="@dimen/letter_margin2"
+                        android:text="2"
+                        android:textSize="@dimen/text_size1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_marginEnd="@dimen/letter_margin2"
+                        android:text="3"
+                        android:textSize="@dimen/text_size1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_marginEnd="@dimen/letter_margin2"
+                        android:text="4"
+                        android:textSize="@dimen/text_size1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_marginEnd="@dimen/letter_margin2"
+                        android:text="5"
+                        android:textSize="@dimen/text_size1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_marginEnd="@dimen/letter_margin2"
+                        android:text="6"
+                        android:textSize="@dimen/text_size1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_marginEnd="@dimen/letter_margin2"
+                        android:text="7"
+                        android:textSize="@dimen/text_size1" />
+
+                </TableRow>
                 <TableRow
                     android:id="@+id/tableRow1"
                     android:layout_width="match_parent"
@@ -338,7 +394,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/textVie22"
+                        android:id="@+id/textView22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
@@ -465,7 +521,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/submitButton"
+        android:id="@+id/submitBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
