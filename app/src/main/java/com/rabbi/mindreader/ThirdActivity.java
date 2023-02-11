@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 public class ThirdActivity extends AppCompatActivity {
 
+    public static final String FINAL_OUTPUT = "finalOutput";
+
     private int gettingNumberOfLetter;
     private EditText editText1,editText2,editText3,editText4,editText5;
     private TableRow tableRow1,tableRow2,tableRow3,tableRow4,tableRow5;
@@ -328,20 +330,23 @@ public class ThirdActivity extends AppCompatActivity {
             pickingValueForFirstEditText1();
             pickingValueForFirstEditText2();
             pickingValueForFirstEditText3();
-            Toast.makeText(this, finalText1+finalText2+finalText3, Toast.LENGTH_SHORT).show();
+            String finalOutput = finalText1+finalText2+finalText3;
+            startActivity(new Intent(ThirdActivity.this,FourthActivity.class).putExtra(FINAL_OUTPUT,finalOutput));
         }else if (gettingNumberOfLetter==4){
             pickingValueForFirstEditText1();
             pickingValueForFirstEditText2();
             pickingValueForFirstEditText3();
             pickingValueForFirstEditText4();
-            Toast.makeText(this, finalText1+finalText2+finalText3+finalText4, Toast.LENGTH_SHORT).show();
+            String finalOutput = finalText1+finalText2+finalText3+finalText4;
+            startActivity(new Intent(ThirdActivity.this,FourthActivity.class).putExtra(FINAL_OUTPUT,finalOutput));
         }else if (gettingNumberOfLetter==5){
             pickingValueForFirstEditText1();
             pickingValueForFirstEditText2();
             pickingValueForFirstEditText3();
             pickingValueForFirstEditText4();
             pickingValueForFirstEditText5();
-            Toast.makeText(this, finalText1+finalText2+finalText3+finalText4+finalText5, Toast.LENGTH_SHORT).show();
+            String finalOutput = finalText1+finalText2+finalText3+finalText4+finalText5;
+            startActivity(new Intent(ThirdActivity.this,FourthActivity.class).putExtra(FINAL_OUTPUT,finalOutput));
         }
 
 
