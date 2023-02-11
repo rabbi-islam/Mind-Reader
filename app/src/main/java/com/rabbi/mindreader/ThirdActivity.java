@@ -20,9 +20,10 @@ public class ThirdActivity extends AppCompatActivity {
     private TableRow tableRow1,tableRow2,tableRow3,tableRow4,tableRow5;
     private  Button submitBtn;
     private  String num1,num2,num3,num4,num5,value;
-    String   alphabet1,alphabet2,alphabet3,alphabet4,alphabet5,val1;
+    String   alphabet1,alphabet2,alphabet3,alphabet4,alphabet5,val1,finalText1,finalText2,finalText3,finalText4,finalText5;
     int int1, int2, int3, int4, int5;
     Intent intent;
+    TextView gettingText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -321,7 +322,171 @@ public class ThirdActivity extends AppCompatActivity {
         }
     }
     public void sendValue(){
-        Toast.makeText(this, "Working!", Toast.LENGTH_SHORT).show();
 
+
+        if (gettingNumberOfLetter==3){
+            pickingValueForFirstEditText1();
+            pickingValueForFirstEditText2();
+            pickingValueForFirstEditText3();
+            Toast.makeText(this, finalText1+finalText2+finalText3, Toast.LENGTH_SHORT).show();
+        }else if (gettingNumberOfLetter==4){
+            pickingValueForFirstEditText1();
+            pickingValueForFirstEditText2();
+            pickingValueForFirstEditText3();
+            pickingValueForFirstEditText4();
+            Toast.makeText(this, finalText1+finalText2+finalText3+finalText4, Toast.LENGTH_SHORT).show();
+        }else if (gettingNumberOfLetter==5){
+            pickingValueForFirstEditText1();
+            pickingValueForFirstEditText2();
+            pickingValueForFirstEditText3();
+            pickingValueForFirstEditText4();
+            pickingValueForFirstEditText5();
+            Toast.makeText(this, finalText1+finalText2+finalText3+finalText4+finalText5, Toast.LENGTH_SHORT).show();
+        }
+
+
+
+
+
+
+
+    }
+    public void pickingValueForFirstEditText1(){
+
+        String str1 = editText1.getText().toString().trim();
+
+
+        if (Integer.parseInt(str1) == 1){
+            gettingText = (TextView)tableRow1.getChildAt(0);
+            finalText1 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str1) == 2){
+            gettingText = (TextView)tableRow1.getChildAt(1);
+            finalText1 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str1) == 3){
+            gettingText = (TextView)tableRow1.getChildAt(2);
+            finalText1 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str1) == 4){
+            gettingText = (TextView)tableRow1.getChildAt(3);
+            finalText1 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str1) == 5){
+            gettingText = (TextView)tableRow1.getChildAt(4);
+            finalText1 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str1) == 6){
+            gettingText = (TextView)tableRow1.getChildAt(5);
+            finalText1 = gettingText.getText().toString();
+        }else{
+            gettingText = (TextView)tableRow1.getChildAt(6);
+            finalText1 = gettingText.getText().toString();
+        }
+    }
+    public void pickingValueForFirstEditText2(){
+
+        String str2 = editText2.getText().toString().trim();
+
+
+        if (Integer.parseInt(str2) == 1){
+            gettingText = (TextView)tableRow2.getChildAt(0);
+            finalText2 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str2) == 2){
+            gettingText = (TextView)tableRow2.getChildAt(1);
+            finalText2 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str2) == 3){
+            gettingText = (TextView)tableRow2.getChildAt(2);
+            finalText2 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str2) == 4){
+            gettingText = (TextView)tableRow2.getChildAt(3);
+            finalText2 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str2) == 5){
+            gettingText = (TextView)tableRow2.getChildAt(4);
+            finalText2 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str2) == 6){
+            gettingText = (TextView)tableRow2.getChildAt(5);
+            finalText2 = gettingText.getText().toString();
+        }else{
+            gettingText = (TextView)tableRow2.getChildAt(6);
+            finalText2 = gettingText.getText().toString();
+        }
+    }
+    public void pickingValueForFirstEditText3(){
+
+        String str3 = editText3.getText().toString().trim();
+
+        if (Integer.parseInt(str3) == 1){
+            gettingText = (TextView)tableRow3.getChildAt(0);
+            finalText3 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str3) == 2){
+            gettingText = (TextView)tableRow3.getChildAt(1);
+            finalText3 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str3) == 3){
+            gettingText = (TextView)tableRow3.getChildAt(2);
+            finalText3 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str3) == 4){
+            gettingText = (TextView)tableRow3.getChildAt(3);
+            finalText3 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str3) == 5){
+            gettingText = (TextView)tableRow3.getChildAt(4);
+            finalText3 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str3) == 6){
+            gettingText = (TextView)tableRow3.getChildAt(5);
+            finalText3 = gettingText.getText().toString();
+        }else{
+            gettingText = (TextView)tableRow3.getChildAt(6);
+            finalText3 = gettingText.getText().toString();
+        }
+    }
+    public void pickingValueForFirstEditText4(){
+
+        String str4 = editText4.getText().toString().trim();
+
+
+        if (Integer.parseInt(str4) == 1){
+            gettingText = (TextView)tableRow4.getChildAt(0);
+            finalText4 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str4) == 2){
+            gettingText = (TextView)tableRow4.getChildAt(1);
+            finalText4 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str4) == 3){
+            gettingText = (TextView)tableRow4.getChildAt(2);
+            finalText4 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str4) == 4){
+            gettingText = (TextView)tableRow4.getChildAt(3);
+            finalText4 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str4) == 5){
+            gettingText = (TextView)tableRow4.getChildAt(4);
+            finalText4 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str4) == 6){
+            gettingText = (TextView)tableRow4.getChildAt(5);
+            finalText4 = gettingText.getText().toString();
+        }else{
+            gettingText = (TextView)tableRow4.getChildAt(6);
+            finalText4 = gettingText.getText().toString();
+        }
+    }
+    public void pickingValueForFirstEditText5(){
+
+        String str5 = editText5.getText().toString().trim();
+
+        if (Integer.parseInt(str5) == 1){
+            gettingText = (TextView)tableRow5.getChildAt(0);
+            finalText5 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str5) == 2){
+            gettingText = (TextView)tableRow5.getChildAt(1);
+            finalText5 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str5) == 3){
+            gettingText = (TextView)tableRow5.getChildAt(2);
+            finalText5 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str5) == 4){
+            gettingText = (TextView)tableRow5.getChildAt(3);
+            finalText5 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str5) == 5){
+            gettingText = (TextView)tableRow5.getChildAt(4);
+            finalText5 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str5) == 6){
+            gettingText = (TextView)tableRow5.getChildAt(5);
+            finalText5 = gettingText.getText().toString();
+        }else{
+            gettingText = (TextView)tableRow5.getChildAt(6);
+            finalText5 = gettingText.getText().toString();
+        }
     }
 }
