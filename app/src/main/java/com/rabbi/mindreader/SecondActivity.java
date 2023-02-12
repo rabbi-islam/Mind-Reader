@@ -17,12 +17,13 @@ public class SecondActivity extends AppCompatActivity {
     public static final String alphabetValue3 = "com3";
     public static final String alphabetValue4 = "com4";
     public static final String alphabetValue5 = "com5";
+    public static final String alphabetValue6 = "com6";
 
 
     private  int gettingNumberOfLetter;
-   private EditText editText1,editText2,editText3,editText4,editText5;
+   private EditText editText1,editText2,editText3,editText4,editText5,editText6;
    private Button submitBtn;
-   private String num1,num2,num3,num4,num5,value;
+   private String num1,num2,num3,num4,num5,num6,value;
     String val1;
 
     @Override
@@ -42,6 +43,7 @@ public class SecondActivity extends AppCompatActivity {
         editText3 = findViewById(R.id.inputNumberEdittext3);
         editText4 = findViewById(R.id.inputNumberEdittext4);
         editText5 = findViewById(R.id.inputNumberEdittext5);
+        editText6 = findViewById(R.id.inputNumberEdittext6);
         submitBtn = findViewById(R.id.submitButton);
 
 
@@ -61,9 +63,13 @@ public class SecondActivity extends AppCompatActivity {
          if (gettingNumberOfLetter==3){
              editText4.setVisibility(View.GONE);
              editText5.setVisibility(View.GONE);
+             editText6.setVisibility(View.GONE);
         }else if (gettingNumberOfLetter==4){
              editText5.setVisibility(View.GONE);
-        }
+             editText6.setVisibility(View.GONE);
+        }else if (gettingNumberOfLetter==5){
+             editText6.setVisibility(View.GONE);
+         }
     }
 
     public void isValidte(){
@@ -73,6 +79,7 @@ public class SecondActivity extends AppCompatActivity {
         num3 = editText3.getText().toString().trim();
         num4 = editText4.getText().toString().trim();
         num5 = editText5.getText().toString().trim();
+        num6 = editText6.getText().toString().trim();
 
 
          if (gettingNumberOfLetter==3){
@@ -81,7 +88,9 @@ public class SecondActivity extends AppCompatActivity {
              validationForFourEditText();
         }else if (gettingNumberOfLetter==5){
              validationForFiveEditText();
-        }
+        }else if (gettingNumberOfLetter==6){
+             validationForSixEditText();
+         }
 
 }
 
@@ -153,6 +162,34 @@ public class SecondActivity extends AppCompatActivity {
             sendValue();
         }
     }
+    private void validationForSixEditText(){
+        if ((num1.isEmpty()) || (num2.isEmpty()) || (num3.isEmpty()) || (num4.isEmpty()) || (num5.isEmpty()) || (num6.isEmpty()) ){
+
+            Toast.makeText(this, "field must not be empty!", Toast.LENGTH_SHORT).show();
+
+        } else if ((Integer.parseInt(num1)<1) || (Integer.parseInt(num1)>4)){
+
+            Toast.makeText(this, "num1 invalid!", Toast.LENGTH_SHORT).show();
+
+        }else if ((Integer.parseInt(num2)<1) || (Integer.parseInt(num2)>4)){
+
+            Toast.makeText(this, "num2 invalid!!", Toast.LENGTH_SHORT).show();
+        }else if ((Integer.parseInt(num3)<1) || (Integer.parseInt(num3)>4)){
+
+            Toast.makeText(this, "num3 invalid!!", Toast.LENGTH_SHORT).show();
+        }else if ((Integer.parseInt(num4)<1) || (Integer.parseInt(num4)>4)){
+
+            Toast.makeText(this, "num4 invalid!!", Toast.LENGTH_SHORT).show();
+        }else if ((Integer.parseInt(num5)<1) || (Integer.parseInt(num5)>4)){
+
+            Toast.makeText(this, "num5 invalid!!", Toast.LENGTH_SHORT).show();
+        }else if ((Integer.parseInt(num6)<1) || (Integer.parseInt(num6)>4)){
+
+            Toast.makeText(this, "num6 invalid!!", Toast.LENGTH_SHORT).show();
+        }else{
+            sendValue();
+        }
+    }
     public void sendValue(){
         //sending edittext number in 3rd activity got from 1st activity
         Intent intent = new Intent(this, ThirdActivity.class);
@@ -173,6 +210,13 @@ public class SecondActivity extends AppCompatActivity {
             intent.putExtra(alphabetValue3, num3);
             intent.putExtra(alphabetValue4, num4);
             intent.putExtra(alphabetValue5, num5);
+        }else if (gettingNumberOfLetter==6){
+            intent.putExtra(alphabetValue1, num1);
+            intent.putExtra(alphabetValue2, num2);
+            intent.putExtra(alphabetValue3, num3);
+            intent.putExtra(alphabetValue4, num4);
+            intent.putExtra(alphabetValue5, num5);
+            intent.putExtra(alphabetValue6, num6);
         }
         startActivity(intent);
 

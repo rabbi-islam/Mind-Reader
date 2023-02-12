@@ -18,12 +18,12 @@ public class ThirdActivity extends AppCompatActivity {
     public static final String FINAL_OUTPUT = "finalOutput";
 
     private int gettingNumberOfLetter;
-    private EditText editText1,editText2,editText3,editText4,editText5;
-    private TableRow tableRow1,tableRow2,tableRow3,tableRow4,tableRow5;
+    private EditText editText1,editText2,editText3,editText4,editText5,editText6;
+    private TableRow tableRow1,tableRow2,tableRow3,tableRow4,tableRow5,tableRow6;
     private  Button submitBtn;
-    private  String num1,num2,num3,num4,num5,value;
-    String   alphabet1,alphabet2,alphabet3,alphabet4,alphabet5,val1,finalText1,finalText2,finalText3,finalText4,finalText5;
-    int int1, int2, int3, int4, int5;
+    private  String num1,num2,num3,num4,num5,num6,value;
+    String   alphabet1,alphabet2,alphabet3,alphabet4,alphabet5,alphabet6,val1,finalText1,finalText2,finalText3,finalText4,finalText5,finalText6;
+    int int1, int2, int3, int4, int5,int6;
     Intent intent;
     TextView gettingText;
 
@@ -43,12 +43,13 @@ public class ThirdActivity extends AppCompatActivity {
         tableRow3 = findViewById(R.id.tableRow3);
         tableRow4 = findViewById(R.id.tableRow4);
         tableRow5 = findViewById(R.id.tableRow5);
-        tableRow1 = findViewById(R.id.tableRow1);
+        tableRow6 = findViewById(R.id.tableRow6);
         editText1 = findViewById(R.id.inputEdittext1);
         editText2 = findViewById(R.id.inputEdittext2);
         editText3 = findViewById(R.id.inputEdittext3);
         editText4 = findViewById(R.id.inputEdittext4);
         editText5 = findViewById(R.id.inputEdittext5);
+        editText6 = findViewById(R.id.inputEdittext6);
         submitBtn = findViewById(R.id.submitBtn);
 
         //Hiding edittext here
@@ -89,14 +90,25 @@ public class ThirdActivity extends AppCompatActivity {
             settingAlphabetvalue3();
             settingAlphabetvalue4();
             settingAlphabetvalue5();
+        }else if (gettingNumberOfLetter == 6) {
+            settingAlphabetvalue1();
+            settingAlphabetvalue2();
+            settingAlphabetvalue3();
+            settingAlphabetvalue4();
+            settingAlphabetvalue5();
+            settingAlphabetvalue6();
         }
     }
     public void hideEditText(){
         if (gettingNumberOfLetter==3){
             editText4.setVisibility(View.GONE);
             editText5.setVisibility(View.GONE);
+            editText6.setVisibility(View.GONE);
         }else if (gettingNumberOfLetter==4){
             editText5.setVisibility(View.GONE);
+            editText6.setVisibility(View.GONE);
+        }else if (gettingNumberOfLetter==5){
+            editText6.setVisibility(View.GONE);
         }
     }
     public void letterBox(){
@@ -169,6 +181,21 @@ public class ThirdActivity extends AppCompatActivity {
             val1 = "0";
         }
     }
+    public void letterBox6(){
+
+        if (int6 == 1) {
+            val1 = "A  E  I  M  Q  U  Y";
+        } else if (int6 == 2) {
+            val1 = "B  F  J  N  R  V  Z";
+        } else if (int6 == 3) {
+            val1 = "C  G  K  O  S  W   ";
+        } else if (int6 == 4) {
+            val1 = "D  H  L  P  T  X   ";
+        } else {
+            val1 = "0";
+        }
+    }
+
     public void settingAlphabetvalue1(){
         alphabet1 = intent.getStringExtra(SecondActivity.alphabetValue1);
         int1 = Integer.parseInt(alphabet1);
@@ -235,6 +262,19 @@ public class ThirdActivity extends AppCompatActivity {
             tv.setText(splitString3[i]);
         }
     }
+    public void settingAlphabetvalue6(){
+        alphabet6 = intent.getStringExtra(SecondActivity.alphabetValue6);
+        int6 = Integer.parseInt(alphabet6);
+        letterBox6();
+
+        int[] textViews6 = {R.id.textView36, R.id.textView37, R.id.textView38, R.id.textView39, R.id.textView40, R.id.textView41, R.id.textView42};
+        String myString6 = val1;
+        String[] splitString6 = myString6.split("  ");
+        for (int i = 0; i < textViews6.length; i++) {
+            TextView tv = findViewById(textViews6[i]);
+            tv.setText(splitString6[i]);
+        }
+    }
 
     public void isValidte(){
 
@@ -243,6 +283,7 @@ public class ThirdActivity extends AppCompatActivity {
         num3 = editText3.getText().toString().trim();
         num4 = editText4.getText().toString().trim();
         num5 = editText5.getText().toString().trim();
+        num6 = editText6.getText().toString().trim();
 
 
         if (gettingNumberOfLetter==3){
@@ -251,6 +292,8 @@ public class ThirdActivity extends AppCompatActivity {
             validationForFourEditText();
         }else if (gettingNumberOfLetter==5){
             validationForFiveEditText();
+        }else if (gettingNumberOfLetter==6){
+            validationForSixEditText();
         }
 
     }
@@ -323,6 +366,34 @@ public class ThirdActivity extends AppCompatActivity {
             sendValue();
         }
     }
+    private void validationForSixEditText(){
+        if ((num1.isEmpty()) || (num2.isEmpty()) || (num3.isEmpty()) || (num4.isEmpty()) || (num5.isEmpty()) || (num6.isEmpty()) ){
+
+            Toast.makeText(this, "field must not be empty!", Toast.LENGTH_SHORT).show();
+
+        } else if ((Integer.parseInt(num1)<1) || (Integer.parseInt(num1)>7)){
+
+            Toast.makeText(this, "num1 invalid!", Toast.LENGTH_SHORT).show();
+
+        }else if ((Integer.parseInt(num2)<1) || (Integer.parseInt(num2)>7)){
+
+            Toast.makeText(this, "num2 invalid!!", Toast.LENGTH_SHORT).show();
+        }else if ((Integer.parseInt(num3)<1) || (Integer.parseInt(num3)>7)){
+
+            Toast.makeText(this, "num3 invalid!!", Toast.LENGTH_SHORT).show();
+        }else if ((Integer.parseInt(num4)<1) || (Integer.parseInt(num4)>7)){
+
+            Toast.makeText(this, "num4 invalid!!", Toast.LENGTH_SHORT).show();
+        }else if ((Integer.parseInt(num5)<1) || (Integer.parseInt(num5)>7)){
+
+            Toast.makeText(this, "num5 invalid!!", Toast.LENGTH_SHORT).show();
+        }else if ((Integer.parseInt(num6)<1) || (Integer.parseInt(num6)>7)){
+
+            Toast.makeText(this, "num6 invalid!!", Toast.LENGTH_SHORT).show();
+        }else{
+            sendValue();
+        }
+    }
     public void sendValue(){
 
 
@@ -347,11 +418,16 @@ public class ThirdActivity extends AppCompatActivity {
             pickingValueForFirstEditText5();
             String finalOutput = finalText1+finalText2+finalText3+finalText4+finalText5;
             startActivity(new Intent(ThirdActivity.this,FourthActivity.class).putExtra(FINAL_OUTPUT,finalOutput));
+        }else if (gettingNumberOfLetter==6){
+            pickingValueForFirstEditText1();
+            pickingValueForFirstEditText2();
+            pickingValueForFirstEditText3();
+            pickingValueForFirstEditText4();
+            pickingValueForFirstEditText5();
+            pickingValueForFirstEditText6();
+            String finalOutput = finalText1+finalText2+finalText3+finalText4+finalText5+finalText6;
+            startActivity(new Intent(ThirdActivity.this,FourthActivity.class).putExtra(FINAL_OUTPUT,finalOutput));
         }
-
-
-
-
 
 
 
@@ -492,6 +568,33 @@ public class ThirdActivity extends AppCompatActivity {
         }else{
             gettingText = (TextView)tableRow5.getChildAt(6);
             finalText5 = gettingText.getText().toString();
+        }
+    }
+    public void pickingValueForFirstEditText6(){
+
+        String str6 = editText6.getText().toString().trim();
+
+        if (Integer.parseInt(str6) == 1){
+            gettingText = (TextView)tableRow6.getChildAt(0);
+            finalText6 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str6) == 2){
+            gettingText = (TextView)tableRow6.getChildAt(1);
+            finalText6 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str6) == 3){
+            gettingText = (TextView)tableRow6.getChildAt(2);
+            finalText6 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str6) == 4){
+            gettingText = (TextView)tableRow6.getChildAt(3);
+            finalText6 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str6) == 5){
+            gettingText = (TextView)tableRow6.getChildAt(4);
+            finalText6 = gettingText.getText().toString();
+        }else if (Integer.parseInt(str6) == 6){
+            gettingText = (TextView)tableRow6.getChildAt(5);
+            finalText6 = gettingText.getText().toString();
+        }else{
+            gettingText = (TextView)tableRow6.getChildAt(6);
+            finalText6 = gettingText.getText().toString();
         }
     }
 }

@@ -47,7 +47,7 @@ public class FourthActivity extends AppCompatActivity {
 
                 showingText.setText(output);
                 startAnimation();
-            }
+            } 
         },3000);
 
     }
