@@ -8,21 +8,24 @@
     tools:context=".SplashActivity">
 
     <TextView
+        android:id="@+id/mindReaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mind Reader"
         android:fontFamily="@font/bold"
         android:textSize="25sp"
+        android:layout_above="@+id/mindLogo"
         android:textColor="@color/teal_700"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/letter_margin2"/>
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/mindLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/mindlogofinal" />
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/mind" />
 
     <TextView
         android:layout_width="wrap_content"

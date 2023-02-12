@@ -9,6 +9,15 @@
     android:orientation="vertical"
     tools:context=".FourthActivity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/lottieAnimation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/congratulations"/>
+
 
     <TextView
         android:id="@+id/congrats"
@@ -18,13 +27,14 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/bold"
         android:text="Congratulations!"
+        android:paddingBottom="@dimen/letter_margin"
         android:textColor="@color/teal_700"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimation"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
         android:layout_centerInParent="true"
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/surprise_gift_box">
@@ -52,6 +62,6 @@
         android:fontFamily="@font/bold"
         android:text=""
         android:textColor="@color/teal_700"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
 </RelativeLayout>
