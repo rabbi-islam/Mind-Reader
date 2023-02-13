@@ -75,16 +75,19 @@ public class ThirdActivity extends AppCompatActivity {
         if (gettingNumberOfLetter == 3) {
             tableRow4.setVisibility(View.GONE);
             tableRow5.setVisibility(View.GONE);
+            tableRow6.setVisibility(View.GONE);
             settingAlphabetvalue1();
             settingAlphabetvalue2();
             settingAlphabetvalue3();
         }else if (gettingNumberOfLetter == 4) {
             tableRow5.setVisibility(View.GONE);
+            tableRow6.setVisibility(View.GONE);
             settingAlphabetvalue1();
             settingAlphabetvalue2();
             settingAlphabetvalue3();
             settingAlphabetvalue4();
         }else if (gettingNumberOfLetter == 5) {
+            tableRow6.setVisibility(View.GONE);
             settingAlphabetvalue1();
             settingAlphabetvalue2();
             settingAlphabetvalue3();
